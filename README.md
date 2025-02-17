@@ -1,7 +1,8 @@
 SCHOOL WORK
+
 Northwestern Oklahoma State University 
 
--Freshman year 
+- Freshman year 
   - Fall 2023
       - Composition I
       - Computer Programming I
