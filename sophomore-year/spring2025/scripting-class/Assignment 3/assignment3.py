@@ -43,4 +43,4 @@ while True: # Main loop
     exitCondition = input("\nWould you like to exit the program? (yes or no): ").strip().lower()
     if exitCondition == "yes":
         print("\nThank you for using the Credit Hour Calculator! Goodbye!")
-        break 
+      break
