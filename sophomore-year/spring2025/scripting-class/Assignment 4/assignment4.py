@@ -6,45 +6,75 @@ We want the user to be able to select one of the options to enter hours into ins
 Modify the program to display an at the moment of number of hours entered by the user. 
 """
 
-def creditHourCalculate(): # Function to calculate credit hours
+
+
+def creditHourCalculator():
+    creditHours = 0  # total credit hours
     while True:
+        print("\nWhat would you like to do?")
+        print("1. Add 1-credit hour classes")
+        print("2. Add 2-credit hour classes")
+        print("3. Add 3-credit hour classes")
+        print("4. Add 4-credit hour classes")
+        print("5. Finish and calculate total")
+
         try:
-            num1 = int(input("How many 1-credit hour classes are you taking?: "))
-            num2 = int(input("How many 2-credit hour classes are you taking?: "))
-            num3 = int(input("How many 3-credit hour classes are you taking?: "))
-            num4 = int(input("How many 4-credit hour classes are you taking?: "))
-            break  # Exit loop if all inputs are valid
+            choice = int(input("Enter your choice (1-5): "))
+            if choice == 5:
+                break  # Exit this loop to return total hours
+            elif choice < 1 or choice > 5:
+                print("Please enter a number between 1 and 5.")
+                continue
         except ValueError:
-            print("Invalid input! Please enter only whole numbers.")
+            print("Invalid input. Please enter a number between 1 and 5.")
+            continue
 
+        # Ask how many classes of the chosen type
+        try:
+            num_classes = int(input("How many classes?: "))
+            if num_classes < 0:
+                print("Please enter a positive number.")
+                continue
+        except ValueError:
+            print("Invalid input. Please enter a whole number.")
+            continue
 
+        # Add to credit hour total based on the type
+        if choice == 1:
+            creditHours += 1 * num_classes
+        elif choice == 2:
+            creditHours += 2 * num_classes
+        elif choice == 3:
+            creditHours += 3 * num_classes
+        elif choice == 4:
+            creditHours += 4 * num_classes
 
-    creditHours = num1 + (2 * num2) + (3 * num3) + (4 * num4)
+        print(f"\nCurrent total credit hours: {creditHours}")
 
-    if creditHours > 12:
-        print(f"\nYou are taking {creditHours} credit hours this semester. You're doing great! Keep it up!")
-    elif creditHours < 9:
-        print(f"\nYou are taking {creditHours} credit hours this semester. You could do better than that!")
-    else:
-        print(f"\nYou are taking {creditHours} credit hours this semester. You're doing okay.")
+    return creditHours
 
-
-while True: # Main loop
-    print("\nWelcome to the credit hour calculator!")
+while True: #Main Loop
+    print("\nWelcome to the Credit Hour Calculator!")
     fullName = input("What is your full name?: ")
     studentID = input("What is your student ID?: ")
-    gradYear = input("What year will you graduate?: ")
+    gradYear = input("What is your graduation year?: ")
 
     while True:
-        print(f"\nHello {fullName}, your student ID is {studentID} and you will graduate in {gradYear}.")
-        creditHourCalculate()
+        print (f"\nHello {fullName}, your student ID is {studentID} and you are graduating in {gradYear}.")
+        totalHours = creditHourCalculator()  # Call the function to calculate credit hours
 
-    
-        resetCondition = input("\nWould you like to calculate again? (yes or no): ").strip().lower()
+        # Evaluate total hours
+        if totalHours > 12:
+            print(f"\nYou are taking {totalHours} credit hours this semester. You're doing great! Keep it up!")
+        elif totalHours < 9:
+            print(f"\nYou are taking {totalHours} credit hours this semester. You could do better than that!")
+        else:
+            print(f"\nYou are taking {totalHours} credit hours this semester. You're doing okay.")
+
+        resetCondition = input("\nWould you like to calculate again? (yes/no): ").strip().lower()
         if resetCondition == "no":
-            break  # Exit inner loop and ask if they want to exit the program
-
-    exitCondition = input("\nWould you like to exit the program? (yes or no): ").strip().lower()
-    if exitCondition == "yes":
-        print("\nThank you for using the Credit Hour Calculator! Goodbye!")
-    break
+            print("Thanks for using the Credit Hour Calculator, Goodbye!")
+            break
+        elif resetCondition != "yes":
+            print("Invalid input. Please enter 'yes' or 'no'.")
+            continue

@@ -1,4 +1,4 @@
-#assignment2.py #Looping it all up
+#assignment3.py #Looping it all up
 """
 Take the code you made for Python 2 and put it into a loop that repeats until the user says they want to end the program.
 """
@@ -43,4 +43,4 @@ while True: # Main loop
     exitCondition = input("\nWould you like to exit the program? (yes or no): ").strip().lower()
     if exitCondition == "yes":
         print("\nThank you for using the Credit Hour Calculator! Goodbye!")
-      break
+    break
