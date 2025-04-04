@@ -6,3 +6,4 @@ Completed
     Assignment 1 -- FirstPyProject.py #Basic Input/Output
     Assignment 2 -- Assignment2.py #More Input/Output
     Assignment 3 -- assignment3.py #Looping it all up
+    Assignment 4 -- assignment4.py #Menu and Looping
