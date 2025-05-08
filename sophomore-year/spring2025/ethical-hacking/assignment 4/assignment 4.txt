@@ -1,0 +1,26 @@
+In the Profile dropdown box, change it to Quick Scan and hit the run button. Answer the following questions.
+On the Nmap Output tab, how many closed tcp ports are there?
+there are 94 closed tcp ports
+On the Ports/Hosts tab, how many open ports does it show in green text?
+it shoes 2 in green
+On the Topology tab, how many location dots are there?
+there is two dots
+Save the scan to your computer by clicking Scan in the top left, then Save Scan, and name it Part A.xml
+In the Profile dropdown box, change it to Regular Scan and hit the run button. Answer the following questions.
+On the Nmap Output tab, how many closed tcp ports are there?
+there are 992 closed tcp ports
+On the Ports/Hosts tab, how many open ports does it show in green text?
+there are 4
+On the Topology tab, how many location dots are there?
+It still only shows 2
+Save the scan to your computer by clicking Scan in the top left, then Save Scan, and name it Part B.xml
+
+In the Profile dropdown box, change it to Intense Scan and hit the run button. Answer the following questions.
+On the Nmap Output tab, how many closed tcp ports are there?
+there are 992 closed tcp ports
+On the Ports/Hosts tab, how many open ports does it show in green text?
+there are 4
+On the Topology tab, how many location dots are there?
+there are 17 dots
+Save the scan to your computer by clicking Scan in the top left, then Save Scan, and name it Part C.xml
+Take all three scans and the document that you put the answers into, put all 4 into a zip folder and submit that on Blackboard to Assignment 4.
