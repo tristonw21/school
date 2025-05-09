@@ -1,0 +1,110 @@
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def wait():
+    input("\nPress Enter to continue...")
+
+def intro():
+    clear_screen()
+    print("Welcome to 'The Not-So-Bad Wolf'")
+    print("\nYou've been feeling down lately, wanting some friends to play with. ")
+    print("\nYou always see the three little pigs playing together, and they look like they have so much fun.")
+    print("But they never invite you to join them.")
+    print("Maybe if I go over and ask them to play, they will let me join!")
+    print("\nLets go say Hi!")
+    wait()
+
+def pig_home_1():
+    clear_screen()
+    while True:
+        print("Location 1: Patty the Pig's Treehouse")
+        print("You wonder around until you find a lonely tree in a clearing in the woods.")
+        print("You look up and see a grand treehouse made of sturdy wood and covered with colerful flowers, and a rope ladder draping from a hole in the floor.")
+        print("\nWhat do you do?")
+        print("1. Climb the ladder.")
+        print("2. Yell up to Patty the Pig.")
+
+        choice = input("\nChoose (1 or 2): ")
+
+        if choice == "1":
+            print("\nYou start your way up the ladder, trying not to look down as you do.")
+            print("You get to the top to see a startled pig!")
+            print("\n\"Hey this is my treehouse! What are you doing here?\"")
+            print("\nBefore you can answer, Patty the Pig throws a pie at you and hits you square in the face.")
+            print("You slip off the lader and fall into a pile of leaves.")
+            print("\nTry Again! This time let's ask before we go inside!")
+        elif choice == "2":
+            print("\nYou squeeze through the sticky window and land in a fudge fountain.")
+            print("Piggy #1 giggles and tosses you a towel... along with a pinecone.")
+            print("Messy, but successful!")
+            wait()
+            break
+        else:
+            print("\nYou trip over a stick. Try again.")
+
+        wait()
+
+def pig_home_2():
+    clear_screen()
+    print("🏰 Location 2: Piggy's Tech Fortress")
+    print("Piggy #2 lives inside a giant smart home built from recycled tablets and VR headsets.")
+    print("Drones buzz overhead. This pig is serious about security.")
+    print("\nWhat do you do?")
+    print("1. Hack the front door keypad with a riddle.")
+    print("2. Distract the drone guards with interpretive dance.")
+    
+    choice = input("\nChoose (1 or 2): ")
+    
+    if choice == "1":
+        print("\nYou input the riddle: 'What has four legs in the morning...?'")
+        print("The door clicks open! Piggy #2 is impressed and returns two pinecones he used as coasters.")
+    elif choice == "2":
+        print("\nYour dancing dazzles the drones, which mistake you for a celebrity.")
+        print("Piggy #2 livestreams your moves and gives you the pinecones for 'content rights'.")
+    else:
+        print("\nYou get tangled in wires. Better luck next time.")
+    
+    wait()
+
+def pig_home_3():
+    clear_screen()
+    print("🌲 Location 3: Piggy's Treehouse Spa")
+    print("This final pig lives high in a cozy treehouse full of hammocks and lavender-scented candles.")
+    print("There's even a mud bath... for skincare.")
+    print("\nWhat do you do?")
+    print("1. Climb the rope ladder and offer a spa coupon you found.")
+    print("2. Catapult yourself into the leaf pile below the tree.")
+    
+    choice = input("\nChoose (1 or 2): ")
+    
+    if choice == "1":
+        print("\nPiggy #3 loves coupons! He lets you join his yoga session.")
+        print("After some deep breathing, he gives you your final pinecone.")
+    elif choice == "2":
+        print("\nLeaf explosion! You scare a squirrel, but Piggy #3 laughs.")
+        print("You find the last pinecone stuck in the branches. Score!")
+    else:
+        print("\nYou fall asleep under the tree. Maybe next time.")
+    
+    wait()
+
+def conclusion():
+    clear_screen()
+    print("🎉 The Adventure Ends")
+    print("\nWith all your enchanted pinecones collected, you return home in peace.")
+    print("The pigs wave goodbye — no hard feelings. In fact, you're now all part of a new board game club!")
+    print("You might not be the Big Bad Wolf after all...")
+    print("\nTHE END 🐺💖")
+    wait()
+
+def main():
+    intro()
+    pig_home_1()
+    pig_home_2()
+    pig_home_3()
+    conclusion()
+
+if __name__ == "__main__":
+    main()
